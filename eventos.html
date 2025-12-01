@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nequali — Eventos</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS global + específico da página -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html">
+        <img src="imagens/logo.png" alt="Logo Nequali" class="brand-logo">
+      </a>
+      <ul class="nav-list">
+        <li><a href="eventos.html" aria-current="page">Eventos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / topo da página -->
+    <section class="page-hero">
+      <div class="container hero-content">
+        <h1 class="hero-title">EVENTOS</h1>
+        <p class="hero-lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Informações sobre os próximos eventos, workshops e encontros promovidos pela NEQUALI.
+        </p>
+        <a class="btn-nequali" href="#lista-eventos">Ver agenda</a>
+      </div>
+    </section>
+
+    <!-- Lista de eventos -->
+    <section id="lista-eventos" class="section container">
+      <h2 class="section-title">Próximos eventos</h2>
+      <p class="section-intro">Selecione um evento para ver mais detalhes e inscrever-se.</p>
+
+      <div class="events-grid">
+        <article class="event-card">
+          <img src="https://placehold.co/465x320" alt="Evento 1" class="event-media">
+          <div class="event-body">
+            <time class="event-date">12 Maio • 2026</time>
+            <h3>Workshop — Técnicas de Pesquisa</h3>
+            <p>Oficina prática sobre metodologia e ferramentas para pesquisas aplicadas em empresas.</p>
+            <a class="card-cta" href="#">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img src="https://placehold.co/465x320" alt="Evento 2" class="event-media">
+          <div class="event-body">
+            <time class="event-date">28 Maio • 2026</time>
+            <h3>Painel — Inovação Regional</h3>
+            <p>Debate com empresas, estudantes e pesquisadores sobre inovação local.</p>
+            <a class="card-cta" href="#">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img src="https://placehold.co/465x320" alt="Evento 3" class="event-media">
+          <div class="event-body">
+            <time class="event-date">10 Junho • 2026</time>
+            <h3>Curso Intensivo — Desenvolvimento de Produtos</h3>
+            <p>Capacitação para elaboração de protótipos e validação no mercado.</p>
+            <a class="card-cta" href="#">Saiba mais</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Área de destaque / chamada -->
+    <section class="section container">
+      <div class="highlight">
+        <h2 class="section-title">TÍTULO DE ALGUM DESTAQUE</h2>
+        <p class="section-intro">Descrição complementar de destaque ou resumo de um evento maior.</p>
+        <div class="highlight-media" aria-hidden="true"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>NEQUALI</h3>
+        <p>Quem somos — texto curto sobre a instituição.</p>
+      </div>
+
+      <div>
+        <h4>Siga-nos</h4>
+        <ul class="social-list">
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>Telegram</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <p>IFSULDEMINAS - Campus Machado</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

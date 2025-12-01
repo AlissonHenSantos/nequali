@@ -1,0 +1,175 @@
+*{
+    font-family: 'Inter ', sans-serif;
+    font-weight: 400;
+}
+.banner{
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('images/banner.jpg'); /* coloque o caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow: hidden;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* overlay para melhorar leitura do texto */
+    z-index: 1;
+}
+
+.banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 1100px;
+}
+
+.banner-content h1{
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    line-height: 1.05;
+}
+
+.banner-content p{
+    margin-top: 0.8rem;
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+    opacity: 0.95;
+}
+
+.banner-content .btn-nequali{
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.7rem 1.25rem;
+    background: rgba(205, 164, 22, 0.45);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    fill: rgba(205, 164, 22, 0.45);
+}
+
+/* ajustes para telas pequenas */
+@media (max-width: 600px){
+    .banner{ min-height: 60vh; background-position: center 30%; }
+    .banner__content{ padding: 1rem; }
+}
+/* ...existing code... */
+
+/* Reset / base */
+:root{
+  --bg:#ffffff;
+  --brand:#cd-a416; /* cor aproximada do dourado */
+  --muted:#d9d9d9;
+  --text:#111;
+  --max-width:1200px;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); background:var(--bg);}
+
+/* container utilitário */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem;}
+
+/* Header / Nav */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.6);backdrop-filter:blur(6px)}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand-logo{height:56px;display:block}
+.nav-list{list-style:none;display:flex;gap:1.25rem;margin:0;padding:0}
+.nav-list a{color:var(--text);text-decoration:none;font-weight:500;font-size:1rem;}
+
+/* Banner */
+.banner{
+  position:relative;
+  display:flex;
+  align-items:center;
+  min-height:80vh;
+  background-image: url('imagens/banner.jpg');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  overflow:hidden;
+  padding:4rem 0;
+}
+.banner::before{
+  content:"";
+  position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25));z-index:1;
+}
+.banner-content{position:relative;z-index:2;max-width:900px;padding:2rem}
+.banner-title{
+  margin:0;
+  font-weight:700;
+  font-size:clamp(2rem,6vw,4.5rem);
+  letter-spacing:1px;
+}
+.banner-text{
+  margin:1rem 0 0.75rem;
+  font-size:clamp(1rem,2.2vw,1.25rem);
+  line-height:1.6;
+  opacity:0.95;
+  max-width:60ch;
+}
+.btn-nequali{
+  display:inline-block;
+  margin-top:1rem;
+  padding:0.75rem 1.25rem;
+  background:rgba(205,164,22,0.85);
+  color:#111;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.section{padding:4rem 0;border-top:1px solid rgba(0,0,0,0.04)}
+.section-title{font-size:clamp(1.75rem,3.5vw,3rem);margin:0 0 0.5rem}
+.section-intro{color:rgba(0,0,0,0.7);margin-bottom:1.25rem}
+
+/* Capsulas grid */
+.capsulas-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.25rem;
+}
+.card{
+  background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:1rem;text-align:center;
+}
+.card img{width:100%;height:auto;border-radius:8px}
+.card h3{margin:0.75rem 0 0.5rem;font-size:1.125rem}
+.card p{font-size:0.95rem;color:rgba(0,0,0,0.7)}
+.card-cta{display:inline-block;margin-top:0.75rem;padding:0.5rem 0.9rem;background:var(--brand);color:#111;border-radius:10px;text-decoration:none;font-weight:600}
+
+/* Pesquisas layout */
+.pesquisas-layout{display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
+.pesquisa-media img{max-width:100%;border-radius:12px;display:block}
+
+/* Servicos */
+.servicos-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.service-card{background:var(--muted);padding:1.25rem;border-radius:12px;text-align:center}
+
+/* Localizacao map placeholder */
+.map-placeholder{height:240px;background:linear-gradient(90deg,#eee,#ddd);border-radius:12px}
+
+/* Footer */
+.site-footer{background:#f3f3f3;padding:2rem 0}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem}
+
+/* Responsividade fina */
+@media (max-width:800px){
+  .nav-list{display:none}
+  .banner{min-height:60vh;padding:2rem 0}
+  .banner-content{padding:1rem}
+  .banner-title{font-size:clamp(1.6rem,8vw,2.6rem)}
+}

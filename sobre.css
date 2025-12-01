@@ -1,0 +1,102 @@
+:root{
+  --brand:#cda416;
+  --muted:#f6f6f6;
+  --text:#111;
+}
+
+/* Hero */
+.about-hero{
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)), url('imagens/banner.jpg') center/cover no-repeat;
+  color:#fff;
+  padding:6rem 0;
+  display:flex;
+  align-items:center;
+}
+.hero-inner{max-width:1100px}
+.hero-title{margin:0;font-size:clamp(2.25rem,6vw,4rem);font-weight:700;letter-spacing:1px}
+.hero-lead{margin-top:0.75rem;font-size:clamp(1rem,2.2vw,1.25rem);max-width:70ch;opacity:0.95}
+
+/* Core cards */
+.about-core{padding-top:3rem;padding-bottom:3rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.core-card{background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.core-card h3{margin:0 0 .5rem;font-size:1.125rem}
+.core-card p{margin:0;color:rgba(0,0,0,0.7)}
+
+/* Split sections (text + media) */
+.about-section{padding-top:3rem;padding-bottom:3rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.split-media img{width:100%;height:auto;border-radius:12px;display:block}
+.split-text h2{font-size:clamp(1.5rem,3.5vw,2.25rem);margin:0 0 .75rem}
+.split-text p{color:rgba(0,0,0,0.75);line-height:1.6}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.team-card{background:#fff;border-radius:12px;padding:1rem;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.team-card img{width:100%;height:auto;border-radius:8px}
+.team-card h4{margin:.75rem 0 0.25rem}
+.team-card p{margin:0;color:rgba(0,0,0,0.65)}
+
+/* CTA */
+.cta{background:linear-gradient(90deg, rgba(205,164,22,0.12), rgba(205,164,22,0.06));padding:2rem;border-radius:12px;text-align:center}
+.cta h3{margin:0 0 .5rem}
+.cta p{margin:0 0 1rem;color:rgba(0,0,0,0.7)}
+
+/* Responsividade */
+@media (max-width:900px){
+  .grid-3{grid-template-columns:1fr;gap:1rem}
+  .split{grid-template-columns:1fr;gap:1.25rem}
+  .about-hero{padding:3.5rem 0}
+  .hero-title{font-size:clamp(1.75rem,8vw,2.75rem)}
+}
+:root{
+  --brand:#cda416;
+  --muted:#f6f6f6;
+  --text:#111;
+}
+
+/* Hero */
+.about-hero{
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)), url('imagens/banner.jpg') center/cover no-repeat;
+  color:#fff;
+  padding:6rem 0;
+  display:flex;
+  align-items:center;
+}
+.hero-inner{max-width:1100px}
+.hero-title{margin:0;font-size:clamp(2.25rem,6vw,4rem);font-weight:700;letter-spacing:1px}
+.hero-lead{margin-top:0.75rem;font-size:clamp(1rem,2.2vw,1.25rem);max-width:70ch;opacity:0.95}
+
+/* Core cards */
+.about-core{padding-top:3rem;padding-bottom:3rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.core-card{background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.core-card h3{margin:0 0 .5rem;font-size:1.125rem}
+.core-card p{margin:0;color:rgba(0,0,0,0.7)}
+
+/* Split sections (text + media) */
+.about-section{padding-top:3rem;padding-bottom:3rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.split-media img{width:100%;height:auto;border-radius:12px;display:block}
+.split-text h2{font-size:clamp(1.5rem,3.5vw,2.25rem);margin:0 0 .75rem}
+.split-text p{color:rgba(0,0,0,0.75);line-height:1.6}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.team-card{background:#fff;border-radius:12px;padding:1rem;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.team-card img{width:100%;height:auto;border-radius:8px}
+.team-card h4{margin:.75rem 0 0.25rem}
+.team-card p{margin:0;color:rgba(0,0,0,0.65)}
+
+/* CTA */
+.cta{background:linear-gradient(90deg, rgba(205,164,22,0.12), rgba(205,164,22,0.06));padding:2rem;border-radius:12px;text-align:center}
+.cta h3{margin:0 0 .5rem}
+.cta p{margin:0 0 1rem;color:rgba(0,0,0,0.7)}
+
+/* Responsividade */
+@media (max-width:900px){
+  .grid-3{grid-template-columns:1fr;gap:1rem}
+  .split{grid-template-columns:1fr;gap:1.25rem}
+  .about-hero{padding:3.5rem 0}
+  .hero-title{font-size:clamp(1.75rem,8vw,2.75rem)}
+}
