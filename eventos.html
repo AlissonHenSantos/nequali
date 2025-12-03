@@ -7,7 +7,7 @@
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+ <script src="https://apis.google.com/js/api.js"></script>
   <!-- CSS global + específico da página -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="eventos.css">
@@ -42,36 +42,9 @@
       <h2 class="section-title">Próximos eventos</h2>
       <p class="section-intro">Selecione um evento para ver mais detalhes e inscrever-se.</p>
 
-      <div class="events-grid">
-        <article class="event-card">
-          <img src="https://placehold.co/465x320" alt="Evento 1" class="event-media">
-          <div class="event-body">
-            <time class="event-date">12 Maio • 2026</time>
-            <h3>Workshop — Técnicas de Pesquisa</h3>
-            <p>Oficina prática sobre metodologia e ferramentas para pesquisas aplicadas em empresas.</p>
-            <a class="card-cta" href="#">Saiba mais</a>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="https://placehold.co/465x320" alt="Evento 2" class="event-media">
-          <div class="event-body">
-            <time class="event-date">28 Maio • 2026</time>
-            <h3>Painel — Inovação Regional</h3>
-            <p>Debate com empresas, estudantes e pesquisadores sobre inovação local.</p>
-            <a class="card-cta" href="#">Saiba mais</a>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="https://placehold.co/465x320" alt="Evento 3" class="event-media">
-          <div class="event-body">
-            <time class="event-date">10 Junho • 2026</time>
-            <h3>Curso Intensivo — Desenvolvimento de Produtos</h3>
-            <p>Capacitação para elaboração de protótipos e validação no mercado.</p>
-            <a class="card-cta" href="#">Saiba mais</a>
-          </div>
-        </article>
+      <div class="events-grid" id="grid-eventos">
+      
+        
       </div>
     </section>
 
@@ -108,5 +81,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
