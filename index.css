@@ -10,7 +10,7 @@
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url('images/banner.jpg'); /* coloque o caminho da sua imagem */
+    background: url('imagens/banner1.png'); /* coloque o caminho da sua imagem */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,7 +95,7 @@ html,body{height:100%;margin:0;font-family: 'Inter', system-ui, -apple-system, "
   display:flex;
   align-items:center;
   min-height:80vh;
-  background-image: url('imagens/banner.jpg');
+  background-image: url('imagens/banner1.png');
   background-size:cover;
   background-position:center;
   color:#fff;
@@ -160,7 +160,7 @@ html,body{height:100%;margin:0;font-family: 'Inter', system-ui, -apple-system, "
 .service-card{background:var(--muted);padding:1.25rem;border-radius:12px;text-align:center}
 
 /* Localizacao map placeholder */
-.map-placeholder{height:240px;background:linear-gradient(90deg,#eee,#ddd);border-radius:12px}
+.map-placeholder{height:240px;background:linear-gradient(90deg,#eee,#ddd);border-radius:12px; width: 100%;}
 
 /* Footer */
 .site-footer{background:#f3f3f3;padding:2rem 0}

@@ -34,7 +34,7 @@ function loadGoogleSheetData() {
                 p.textContent = data[2];
                 const a = document.createElement('a');
                 a.className = 'card-cta';
-                a.href = data[4];
+                a.href = '#';
                 a.textContent = 'Saiba mais';
                 article.appendChild(img);
                 divEventBody.appendChild(time);
