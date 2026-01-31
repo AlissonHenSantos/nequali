@@ -1,175 +1,311 @@
-*{
-    font-family: 'Inter ', sans-serif;
-    font-weight: 400;
-}
-.banner{
-
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    background: url('imagens/banner1.png'); /* coloque o caminho da sua imagem */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    overflow: hidden;
+:root {
+  --primary-color: #4B2C20; /* Café Escuro */
+  --secondary-color: #A67C52; /* Tom Madeira/Dourado */
+  --accent-color: #2E7D32; /* Verde Folha/IFSULDEMINAS */
+  --bg-light: #F9F9F9;
+  --bg-white: #FFFFFF;
+  --text-color: #333333;
+  --text-light: #666666;
+  --border-radius: 8px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --font-base: 'Inter', sans-serif;
 }
 
-.banner::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45); /* overlay para melhorar leitura do texto */
-    z-index: 1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.banner-content{
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 2rem;
-    max-width: 1100px;
+body {
+  font-family: var(--font-base);
+  color: var(--text-color);
+  background-color: var(--bg-light);
+  font-size: 15px; /* Fonte base ligeiramente reduzida */
+  line-height: 1.6;
 }
 
-.banner-content h1{
-    margin: 0;
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
-    line-height: 1.05;
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
-.banner-content p{
-    margin-top: 0.8rem;
-    font-size: clamp(0.95rem, 2vw, 1.25rem);
-    opacity: 0.95;
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
 }
 
-.banner-content .btn-nequali{
-    display: inline-block;
-    margin-top: 1.25rem;
-    padding: 0.7rem 1.25rem;
-    background: rgba(205, 164, 22, 0.45);
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    fill: rgba(205, 164, 22, 0.45);
+ul {
+  list-style: none;
 }
 
-/* ajustes para telas pequenas */
-@media (max-width: 600px){
-    .banner{ min-height: 60vh; background-position: center 30%; }
-    .banner__content{ padding: 1rem; }
-}
-/* ...existing code... */
-
-/* Reset / base */
-:root{
-  --bg:#ffffff;
-  --brand:#cd-a416; /* cor aproximada do dourado */
-  --muted:#d9d9d9;
-  --text:#111;
-  --max-width:1200px;
-  --radius:12px;
+/* --- Layout --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); background:var(--bg);}
-
-/* container utilitário */
-.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem;}
-
-/* Header / Nav */
-.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.6);backdrop-filter:blur(6px)}
-.navbar{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-.brand-logo{height:56px;display:block}
-.nav-list{list-style:none;display:flex;gap:1.25rem;margin:0;padding:0}
-.nav-list a{color:var(--text);text-decoration:none;font-weight:500;font-size:1rem;}
-
-/* Banner */
-.banner{
-  position:relative;
-  display:flex;
-  align-items:center;
-  min-height:80vh;
-  background-image: url('imagens/banner1.png');
-  background-size:cover;
-  background-position:center;
-  color:#fff;
-  overflow:hidden;
-  padding:4rem 0;
-}
-.banner::before{
-  content:"";
-  position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25));z-index:1;
-}
-.banner-content{position:relative;z-index:2;max-width:900px;padding:2rem}
-.banner-title{
-  margin:0;
-  font-weight:700;
-  font-size:clamp(2rem,6vw,4.5rem);
-  letter-spacing:1px;
-}
-.banner-text{
-  margin:1rem 0 0.75rem;
-  font-size:clamp(1rem,2.2vw,1.25rem);
-  line-height:1.6;
-  opacity:0.95;
-  max-width:60ch;
-}
-.btn-nequali{
-  display:inline-block;
-  margin-top:1rem;
-  padding:0.75rem 1.25rem;
-  background:rgba(205,164,22,0.85);
-  color:#111;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+.section {
+  padding: 60px 0;
 }
 
-/* Sections */
-.section{padding:4rem 0;border-top:1px solid rgba(0,0,0,0.04)}
-.section-title{font-size:clamp(1.75rem,3.5vw,3rem);margin:0 0 0.5rem}
-.section-intro{color:rgba(0,0,0,0.7);margin-bottom:1.25rem}
-
-/* Capsulas grid */
-.capsulas-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:1.25rem;
+.section-title {
+  font-size: 1.75rem; /* Reduzido */
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.card{
-  background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:1rem;text-align:center;
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  color: var(--text-light);
+  font-size: 0.95rem;
 }
-.card img{width:100%;height:auto;border-radius:8px}
-.card h3{margin:0.75rem 0 0.5rem;font-size:1.125rem}
-.card p{font-size:0.95rem;color:rgba(0,0,0,0.7)}
-.card-cta{display:inline-block;margin-top:0.75rem;padding:0.5rem 0.9rem;background:var(--brand);color:#111;border-radius:10px;text-decoration:none;font-weight:600}
 
-/* Pesquisas layout */
-.pesquisas-layout{display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
-.pesquisa-media img{max-width:100%;border-radius:12px;display:block}
+/* --- Header & Nav --- */
+.site-header {
+  background: var(--bg-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
 
-/* Servicos */
-.servicos-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
-.service-card{background:var(--muted);padding:1.25rem;border-radius:12px;text-align:center}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
 
-/* Localizacao map placeholder */
-.map-placeholder{height:240px;background:linear-gradient(90deg,#eee,#ddd);border-radius:12px; width: 100%;}
+.brand-logo {
+  height: 50px;
+}
 
-/* Footer */
-.site-footer{background:#f3f3f3;padding:2rem 0}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem}
+.nav-list {
+  display: flex;
+  gap: 30px;
+}
 
-/* Responsividade fina */
-@media (max-width:800px){
-  .nav-list{display:none}
-  .banner{min-height:60vh;padding:2rem 0}
-  .banner-content{padding:1rem}
-  .banner-title{font-size:clamp(1.6rem,8vw,2.6rem)}
+.nav-list a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.nav-list a:hover {
+  color: var(--secondary-color);
+}
+
+/* --- Banner --- */
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/banner1.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 2.5rem; /* Reduzido */
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.banner-text {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+.btn-nequali {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn-nequali:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* --- Cápsulas Grid --- */
+.capsulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 15px 0 10px;
+  color: var(--primary-color);
+}
+
+.card p {
+  font-size: 0.85rem;
+  padding: 0 15px;
+  color: var(--text-light);
+}
+
+/* --- Torrefação & Pesquisas (Layouts Mistos) --- */
+.pesquisas-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.pesquisa-text {
+  font-size: 0.95rem;
+}
+
+.pesquisa-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.pesquisa-text li {
+  margin-bottom: 8px;
+}
+
+.pesquisa-media img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Serviços/Concursos --- */
+.servicos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* --- Mapa --- */
+.map-wrapper {
+  width: 100%;
+  height: 350px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--primary-color);
+  color: #ddd;
+  padding: 50px 0;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.site-footer h3, .site-footer h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.site-footer a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.social-list li {
+  margin-bottom: 8px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+  
+  .nav-list {
+    margin-top: 15px;
+    gap: 20px;
+  }
+
+  .banner-title {
+    font-size: 1.8rem;
+  }
+
+  .pesquisas-layout {
+    grid-template-columns: 1fr; /* Empilha texto e imagem */
+  }
+
+  .pesquisa-media {
+    order: -1; /* Imagem acima do texto no mobile */
+    margin-bottom: 20px;
+  }
 }
