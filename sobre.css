@@ -1,9 +1,29 @@
 /* --- Hero Específico --- */
 .about-hero {
-  background-color: var(--bg-white);
+  position: relative;
+  min-height: 400px;
   padding: 60px 0 40px;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
@@ -12,14 +32,23 @@
   margin-bottom: 10px;
 }
 
+.sobre-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
 .hero-lead {
   font-size: 1rem;
-  color: var(--text-light);
+  color: black;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* --- Core Values (Missão/Visão) --- */
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -127,6 +156,15 @@
 
 /* --- Responsividade Sobre --- */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .section {
+    margin: 30px 0;
+    padding: 30px 15px;
+  }
+
   .split {
     grid-template-columns: 1fr;
   }

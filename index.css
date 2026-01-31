@@ -110,7 +110,7 @@ ul {
 
 /* --- Banner --- */
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/banner1.png');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/banner1.jpeg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -189,7 +189,7 @@ ul {
 /* --- Torrefação & Pesquisas (Layouts Mistos) --- */
 .pesquisas-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
 }
@@ -211,6 +211,82 @@ ul {
 .pesquisa-media img {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-md);
+}
+
+/* --- Torrefação --- */
+.torrefacao-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.torrefacao-media {
+  display: flex;
+  justify-content: center;
+}
+
+.torrefacao-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+.torrefacao-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.torrefacao-text li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* --- Laboratório --- */
+.laboratorio-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.laboratorio-media {
+  display: flex;
+  justify-content: center;
+}
+
+.laboratorio-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+.laboratorio-text h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.laboratorio-text h3:first-child {
+  margin-top: 0;
+}
+
+.laboratorio-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.laboratorio-text li {
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
 /* --- Serviços/Concursos --- */
@@ -255,6 +331,10 @@ ul {
 }
 
 /* --- Footer --- */
+
+footer p {
+  font-size: 0.8rem;
+}
 .site-footer {
   background-color: var(--primary-color);
   color: #ddd;
@@ -285,6 +365,10 @@ ul {
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .navbar {
     flex-direction: column;
     height: auto;
@@ -300,6 +384,11 @@ ul {
     font-size: 1.8rem;
   }
 
+  .section {
+    margin: 30px 0;
+    padding: 30px 15px;
+  }
+
   .pesquisas-layout {
     grid-template-columns: 1fr; /* Empilha texto e imagem */
   }
@@ -307,5 +396,35 @@ ul {
   .pesquisa-media {
     order: -1; /* Imagem acima do texto no mobile */
     margin-bottom: 20px;
+  }
+
+  /* --- Torrefação Responsivo --- */
+  .torrefacao-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .torrefacao-media {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .torrefacao-text {
+    order: 1;
+  }
+
+  /* --- Laboratório Responsivo --- */
+  .laboratorio-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .laboratorio-media {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .laboratorio-text {
+    order: 1;
   }
 }
