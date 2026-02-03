@@ -351,7 +351,8 @@ footer p {
 .site-footer {
   background-color: var(--primary-color);
   color: #ddd;
-  padding: 50px 0;
+  padding: 30px 0;
+  padding-bottom: 10px ;
   font-size: 1rem;
 }
 
@@ -409,6 +410,30 @@ footer p {
   margin: 0 15px;
   font-size: 1.2rem;
   transform: rotate(-45deg); 
+}
+
+.footer-credits {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;  
+  text-align: center;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.footer-credits p {
+  margin-bottom: 5px;
+}
+
+.footer-credits a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-credits a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -500,7 +525,7 @@ footer p {
   }
 
   .site-footer {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 .banner {
     padding: 50px 0; 
