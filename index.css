@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #4B2C20; /* Café Escuro */
-  --secondary-color: #A67C52; /* Tom Madeira/Dourado */
-  --accent-color: #2E7D32; /* Verde Folha/IFSULDEMINAS */
+  --primary-color: #4B2C20;
+  --secondary-color: #A67C52; 
+  --accent-color: #2E7D32;
   --bg-light: #F9F9F9;
   --bg-white: #FFFFFF;
   --text-color: #333333;
@@ -22,7 +22,7 @@ body {
   font-family: var(--font-base);
   color: var(--text-color);
   background-color: var(--bg-light);
-  font-size: 15px; /* Fonte base ligeiramente reduzida */
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -50,11 +50,11 @@ ul {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .section-title {
-  font-size: 1.75rem; /* Reduzido */
+  font-size: 1.75rem;
   color: var(--primary-color);
   text-align: center;
   margin-bottom: 1rem;
@@ -119,7 +119,7 @@ ul {
 }
 
 .banner-title {
-  font-size: 2.5rem; /* Reduzido */
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 800;
 }
@@ -186,12 +186,25 @@ ul {
   color: var(--text-light);
 }
 
-/* --- Torrefação & Pesquisas (Layouts Mistos) --- */
 .pesquisas-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
+}
+
+.pesquisa-media-destaque {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 5rem 5rem 5rem; 
+}
+
+.img-destaque {
+  width: 80%; 
+  height: auto;
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
 }
 
 .pesquisa-text {
@@ -331,15 +344,15 @@ ul {
 }
 
 /* --- Footer --- */
-
 footer p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
+
 .site-footer {
   background-color: var(--primary-color);
   color: #ddd;
   padding: 50px 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .footer-grid {
@@ -351,7 +364,7 @@ footer p {
 .site-footer h3, .site-footer h4 {
   color: white;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .site-footer a:hover {
@@ -363,21 +376,73 @@ footer p {
   margin-bottom: 8px;
 }
 
-/* --- RESPONSIVIDADE --- */
+.social-list a {
+    display: flex;
+    align-items: center;
+}
+
+.social-list i {
+  margin-right: 8px; 
+  font-size: 1.2rem; 
+}
+
+.coffee-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;  
+  opacity: 0.8;
+}
+
+.coffee-divider::before,
+.coffee-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+}
+
+.coffee-divider i {
+  color: var(--primary-color); 
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transform: rotate(-45deg); 
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
   }
 
   .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 15px 0;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px 15px;
   }
   
   .nav-list {
-    margin-top: 15px;
-    gap: 20px;
+    margin-top: 0; 
+    gap: 15px; 
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+  .nav-list a {
+    font-size: 0.8rem;
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+  .nav-list a {
+    font-size: 0.8rem;
   }
 
   .banner-title {
@@ -385,20 +450,27 @@ footer p {
   }
 
   .section {
-    margin: 30px 0;
-    padding: 30px 15px;
+    margin: 20px 0;
+    padding: 20px 15px;
+  }
+
+  .pesquisa-media-destaque {
+    margin: 2rem 0; 
+  }
+
+  .img-destaque {
+    width: 100%; 
   }
 
   .pesquisas-layout {
-    grid-template-columns: 1fr; /* Empilha texto e imagem */
+    grid-template-columns: 1fr;
   }
 
   .pesquisa-media {
-    order: -1; /* Imagem acima do texto no mobile */
+    order: -1;
     margin-bottom: 20px;
   }
 
-  /* --- Torrefação Responsivo --- */
   .torrefacao-layout {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -413,8 +485,7 @@ footer p {
     order: 1;
   }
 
-  /* --- Laboratório Responsivo --- */
-  .laboratorio-layout {
+    .laboratorio-layout {
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -426,5 +497,23 @@ footer p {
 
   .laboratorio-text {
     order: 1;
+  }
+
+  .site-footer {
+  padding: 30px 0;
+}
+.banner {
+    padding: 50px 0; 
+    background-position: center center;
+  }
+
+  .banner-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .banner-text {
+    font-size: 0.95rem;
+    padding: 0 15px; 
   }
 }

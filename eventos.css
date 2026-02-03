@@ -16,7 +16,6 @@
   font-size: 1rem;
 }
 
-/* --- Grid de Eventos --- */
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -53,7 +52,6 @@
   line-height: 1.4;
 }
 
-/* --- Destaque Highlight --- */
 .highlight {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,7 +84,7 @@
     }
 
     .section {
-      margin: 30px 0;
+      margin: 0px 0;
       padding: 30px 15px;
     }
 
@@ -106,4 +104,5 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+
 }
